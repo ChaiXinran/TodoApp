@@ -18,7 +18,7 @@
 - Windows WebKit 的离线导航没有通过：缓存里已有首页，service worker 已控制页面，但测试环境断网后 fetch/reload 返回 WebKit internal error。记录在 `.verification/webkit-offline-limitation.json`；不能据此声称 iPhone 离线已通过。Chromium 的相同离线测试通过。
 - 未连接真实 iPhone，Safari“添加到主屏幕”、刘海/底部安全区、软键盘、系统文件分享和真实离线重开仍需手机最终验证。
 - 某些 WebKit 测试日志有回退字体证书错误，测试不绕过 TLS；中文界面已使用本机打包字体。专用验证入口没有 sw.js，因此其两次 404 不来自正式发布包。
-- Codemagic 配置已完成，云端构建是否执行及 GitHub 上传状态需以实际远端结果为准，不能把本地构建当作云端构建。
+- 已上传 ChaiXinran/TodoApp 的 main 分支，Codemagic 个人项目也已创建并连接公开仓库。但是项目设置页与应用列表在 HTTP 400 / React #31 后持续空白，尚未触发云端构建。当前可部署包是本地实际构建产物，不能当作 Codemagic 云端成功结果。
 - 数据本机保存，不提供自动云同步。首次打开需要联网加载资源；清除网站数据会删除本机记录。导出/恢复入口提供显式备份。
 
 ## 证据

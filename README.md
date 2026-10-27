@@ -32,6 +32,8 @@ python3 tools/prepare_pwa.py
 
 ## Codemagic 云端构建
 
+源码已上传仓库；项目已在 Codemagic 建立。当前平台页面在 HTTP 400 / React 错误后空白，云端构建尚未启动；本地验证结果与限制见测试报告。
+
 1. 将此工程作为仓库根目录，连接 `ChaiXinran/TodoApp`。
 2. Codemagic 添加应用，选择该仓库、Flutter/YAML 配置，选择 workflow **richang-ios-pwa**。
 3. 启动构建。流程会下载并校验开源字体/WASM、安装依赖、运行 analyze/test、编译 worker、打包 Web 和离线缓存。
