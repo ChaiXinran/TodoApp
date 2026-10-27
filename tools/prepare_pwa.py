@@ -3,7 +3,7 @@ import hashlib, json
 from pathlib import Path
 root=Path(__file__).resolve().parent.parent/'build'/'web'
 if not (root/'main.dart.js').is_file():raise SystemExit('Run flutter build web first')
-excluded={'sw.js','flutter_service_worker.js'}
+excluded={'sw.js','flutter_service_worker.js','.nojekyll','_headers','CNAME'}
 files=sorted(p for p in root.rglob('*') if p.is_file() and p.name not in excluded and not p.name.endswith(('.map','.deps')))
 digest=hashlib.sha256(b''.join(str(p.relative_to(root)).encode()+hashlib.sha256(p.read_bytes()).digest() for p in files)).hexdigest()[:16]
 urls=['./'+p.relative_to(root).as_posix() for p in files]

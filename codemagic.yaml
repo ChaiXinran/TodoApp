@@ -23,7 +23,7 @@ workflows:
       - name: Build Flutter Web and offline cache
         script: |
           set -euo pipefail
-          flutter build web --release --no-web-resources-cdn
+          flutter build web --release --no-web-resources-cdn --base-href /
           python3 tools/prepare_pwa.py
       - name: Package website
         script: |

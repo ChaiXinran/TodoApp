@@ -2,6 +2,10 @@
 
 基于 Flutter Web 的独立 iPhone 版本，云端通过 Codemagic 构建。保留首页、日历、事务、记录、档案五个页面，以及原有配色、插画和猫兔心情。源自安卓 0.4.3，安卓原工程独立保留。
 
+## 正式地址与发布
+
+正式地址：**https://todo.ranyechai.site/**。GitHub Pages 使用 gh-pages 分支，main 保留源码；Cloudflare 的 todo CNAME 指向 chaixinran.github.io，使用仅 DNS。首次发布需等待 DNS 生效和 GitHub HTTPS 证书签发。此域名使用根路径 /，不要使用 /TodoApp/ 作为 base-href。
+
 ## 在 iPhone 使用
 
 用 Safari 打开部署后的固定 HTTPS 网址，选择“分享 → 添加到主屏幕 → 添加”。之后从主屏幕进入。首次联网加载并完成资源缓存后可以离线使用。此版本是 PWA 网站，不是 IPA，不需要 Mac、Xcode 或苹果开发者签名。
