@@ -4,7 +4,7 @@
 
 ## 正式地址与发布
 
-正式地址：**https://todo.ranyechai.site/**。GitHub Pages 使用 gh-pages 分支，main 保留源码；Cloudflare 的 todo CNAME 指向 chaixinran.github.io，使用仅 DNS。首次发布需等待 DNS 生效和 GitHub HTTPS 证书签发。此域名使用根路径 /，不要使用 /TodoApp/ 作为 base-href。
+正式地址：**https://todo.ranyechai.site/**，已于 2026-10-27 上线并启用强制 HTTPS。GitHub Pages 使用 gh-pages 分支，main 保留源码；Cloudflare 的 todo CNAME 指向 chaixinran.github.io，使用仅 DNS。首次发布需等待 DNS 生效和 GitHub HTTPS 证书签发。此域名使用根路径 /，不要使用 /TodoApp/ 作为 base-href。
 
 ## 在 iPhone 使用
 
@@ -36,7 +36,7 @@ python3 tools/prepare_pwa.py
 
 ## Codemagic 云端构建
 
-源码已上传仓库；项目已在 Codemagic 建立。当前平台页面在 HTTP 400 / React 错误后空白，云端构建尚未启动；本地验证结果与限制见测试报告。
+源码已上传仓库；项目已在 Codemagic 建立。Codemagic 平台页面曾因 HTTP 400 / React 错误空白，未完成 Flutter 云端构建。本次使用本地验证后的发布包，通过 GitHub Pages 完成线上发布；验证结果与限制见测试报告。
 
 1. 将此工程作为仓库根目录，连接 `ChaiXinran/TodoApp`。
 2. Codemagic 添加应用，选择该仓库、Flutter/YAML 配置，选择 workflow **richang-ios-pwa**。

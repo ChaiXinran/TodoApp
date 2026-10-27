@@ -28,3 +28,13 @@
 实际浏览器截图在本地 screenshots/：chrome-home、calendar、affairs、records、archive、backup、offline-records；WebKit 对应文件以 webkit- 开头。截图中的 PWA验收记录为专用浏览器测试数据，不含在正式默认数据库中。
 
 构建与运行命令见 README.md 和 codemagic.yaml。正式入口 lib/main.dart，测试入口 tools/web_validation.dart 不可用于发布。
+
+## 2026-10-27 正式域名发布
+
+已将发布产物上传 gh-pages 分支并启用 GitHub Pages；Cloudflare 仅 DNS 的 todo CNAME 指向 chaixinran.github.io，GitHub 在 TodoApp 中绑定 todo.ranyechai.site。HTTPS 证书获批并启用强制 HTTPS。
+
+正式 HTTPS 网站返回 200；390×844 浏览器实际检查首页、日历、事务、记录、档案及 11 门截图课程加载成功，PWA manifest 为 standalone。实际线上 service worker 控制页面并缓存完整资源后，断网重开记录页通过；页面错误与网络失败均为 0。此处是 Chromium 线上验收，原 Windows WebKit 离线导航限制与 iPhone 真机待验收仍保留。
+
+证据：本地 .verification/live-site-result.json 与 pages-deployment.json；实际截图 screenshots/live-home.png、live-calendar.png、live-affairs.png、live-records.png、live-archive.png、live-offline.png。
+
+这次只新增 todo.ranyechai.site 对应的发布绑定，未修改主域名或其他子域名的 DNS。main 存源码，gh-pages 存网站产物。最初上传前仓库没有分支和既有源码；本地安卓源文件哈希保持不变。
