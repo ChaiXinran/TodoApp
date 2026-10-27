@@ -1,0 +1,31 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.idea/
+.metadata
+android/.gradle/
+android/local.properties
+
+*.iml
+*.log
+.verification/
+screenshots/*.sqlite
+screenshots/ui.xml
+
+# Local build outputs and original Android context
+dist/
+screenshots/
+integration_test/
+SOURCE_SNAPSHOT.json
+docs/ANDROID_SOURCE_*
+# Recreated by tools/prepare_assets.py and the Codemagic build
+assets/fonts/NotoSansSC.ttf
+web/sqlite3.wasm
+web/sqflite_sw.js*
+web/icons/Icon-512.png
+web/icons/Icon-maskable-512.png
+assets/fonts/NotoEmoji.ttf

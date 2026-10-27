@@ -1,0 +1,32 @@
+{
+  "id": "./",
+  "name": "日常",
+  "short_name": "日常",
+  "lang": "zh-CN",
+  "description": "记录喜欢的瞬间，慢慢完成想做的事。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFCF5",
+  "theme_color": "#FFFCF5",
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

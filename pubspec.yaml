@@ -1,0 +1,52 @@
+name: richang
+description: "日常：简洁可爱的个人生活记录与日程管理 App"
+publish_to: 'none'
+version: 0.5.0+1
+
+environment:
+  sdk: '>=3.7.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  sqflite: ^2.4.2
+  path: ^1.9.1
+  path_provider: ^2.1.5
+  image_picker: ^1.2.1
+  sqlite3: ^3.8.0
+  sqflite_common_ffi_web: ^1.2.0
+  file_selector: ^1.1.0
+  web: ^1.1.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: NotoEmoji
+      fonts:
+        - asset: assets/fonts/NotoEmoji.ttf
+    - family: NotoSansSC
+      fonts:
+        - asset: assets/fonts/NotoSansSC.ttf
+  assets:
+    - assets/data/semester_2026_pwa.json
+    - assets/branding/richang_cover.png
+    - assets/branding/ycf.jpg
+    - assets/branding/cat_rabbit_heads.png
+    - assets/moods/
+
+
+
+hooks:
+  user_defines:
+    sqlite3:
+      source: system
+      name:
+        windows: winsqlite3
+        default: sqlite3

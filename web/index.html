@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<base href="$FLUTTER_BASE_HREF"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="日常：记录喜欢的瞬间，慢慢完成想做的事。"><meta name="theme-color" content="#FFFCF5">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="日常">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" type="image/png" href="favicon.png"><link rel="manifest" href="manifest.json"><title>日常</title>
+<style>
+html,body{margin:0;height:100%;width:100%;overflow:hidden;background:#FFFCF5;overscroll-behavior:none}
+#app{position:absolute;top:env(safe-area-inset-top,0px);bottom:env(safe-area-inset-bottom,0px);left:env(safe-area-inset-left,0px);right:env(safe-area-inset-right,0px)}
+#loading{position:absolute;inset:0;display:grid;place-content:center;text-align:center;font-family:system-ui,sans-serif;color:#784556;pointer-events:none}
+#loading img{width:180px;max-width:50vw;border-radius:28px;margin:auto}#loading p{font-size:14px;line-height:1.8}
+#load-error{display:none;position:absolute;inset:20px;padding:20px;background:#FFFCF5;color:#784556;font:16px/1.8 system-ui;overflow:auto}
+button{padding:12px 20px;border:0;border-radius:18px;background:#F3D4D9;color:#784556;font:inherit}
+</style></head><body>
+<div id="app"></div><div id="loading"><img src="icons/Icon-192.png" alt="日常"><p>把喜欢的瞬间，留在日常里。<br>正在准备本机记录…</p></div>
+<div id="load-error"><h2>日常暂时没有打开</h2><p>首次打开请连接网络。更新后可重新加载；不要清除网站数据，以免删除本机记录。</p><button onclick="location.reload()">重新加载</button><p id="load-error-detail"></p></div>
+<script>
+window.showRichangLoadError=(error)=>{document.getElementById('loading').style.display='none';document.getElementById('load-error').style.display='block';document.getElementById('load-error-detail').textContent=String(error)};
+window.addEventListener('flutter-first-frame',()=>{document.getElementById('loading').remove()});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./',updateViaCache:'none'}).catch(console.warn);
+</script><script src="flutter_bootstrap.js" async onerror="showRichangLoadError('启动文件未能加载')"></script></body></html>
